@@ -1855,6 +1855,7 @@ exports.setFailed = setFailed;
  * @param message debug message
  */
 function debug(message) {
+    command_1.issue('warning', message);
     command_1.issueCommand('debug', {}, message);
 }
 exports.debug = debug;
