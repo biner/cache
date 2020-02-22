@@ -32,7 +32,7 @@ async function run(): Promise<void> {
             .split("\n")
             .filter(x => x !== "");
         const keys = [primaryKey, ...restoreKeys];
-        core.info("My Cache ");
+
         core.debug("Resolved Keys:");
         core.debug(JSON.stringify(keys));
 
@@ -96,7 +96,7 @@ async function run(): Promise<void> {
                 cacheEntry
             );
             utils.setCacheHitOutput(isExactKeyMatch);
-
+            core.info(`Always Cache`);
             core.info(
                 `Cache restored from key: ${cacheEntry && cacheEntry.cacheKey}`
             );

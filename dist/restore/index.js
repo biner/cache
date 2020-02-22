@@ -2845,6 +2845,7 @@ function run() {
                 yield tar_1.extractTar(archivePath, cachePath);
                 const isExactKeyMatch = utils.isExactKeyMatch(primaryKey, cacheEntry);
                 utils.setCacheHitOutput(isExactKeyMatch);
+                core.info(`Always Cache dist`);
                 core.info(`Cache restored from key: ${cacheEntry && cacheEntry.cacheKey}`);
             }
             catch (error) {

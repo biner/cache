@@ -2740,7 +2740,8 @@ function run() {
             }
             if (utils.isExactKeyMatch(primaryKey, state)) {
                 core.info(`Cache hit occurred on the primary key ${primaryKey}, not saving cache.`);
-                return;
+                core.info(`But... I want always saving cache (condition is empty) dist`);
+                //return;
             }
             core.debug("Reserving Cache");
             const cacheId = yield cacheHttpClient.reserveCache(primaryKey);
