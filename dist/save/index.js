@@ -2763,6 +2763,7 @@ function run() {
                 return;
             }
             core.debug(`Saving Cache (ID: ${cacheId})`);
+            core.info(`Saving Cache (ID: ${cacheId})`);
             yield cacheHttpClient.saveCache(cacheId, archivePath);
         }
         catch (error) {
