@@ -31,7 +31,10 @@ async function run(): Promise<void> {
             core.info(
                 `Cache hit occurred on the primary key ${primaryKey}, not saving cache.`
             );
-            return;
+            core.info(
+                `But... I want always saving cache (condition is empty)`
+            );
+            //return;
         }
 
         core.debug("Reserving Cache");
